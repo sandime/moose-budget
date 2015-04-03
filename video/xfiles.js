@@ -1,7 +1,7 @@
 /**
  * Created by SHERRI on 4/2/15.
  */
-
+/*
 var myVideo = document.getElementById("video1");
 
 function playPause() {
@@ -22,6 +22,6 @@ function makeSmall() {
 function makeNormal() {
     myVideo.width = 420;
 }
-
+*/
 
 
