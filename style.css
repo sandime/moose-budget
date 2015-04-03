@@ -20,15 +20,6 @@ body {
     right: 0px;
 }
 
-.picColor{
-    width:320px; height:240px; border:0px;
-}
-.picColor:hover {
-    background:#FF2400; width:320px; height:240px;
-}
-
-
-
  /*for the sun flip */
 
 .sun {
@@ -109,4 +100,34 @@ body {
     transform:rotateY(0)
 }
 
-
+/* ufo */
+.container {
+    position:relative;
+    overflow:hidden;
+    width:200px;
+    height:150px;
+}
+.container .textbox {
+    position:absolute;
+    top:0;
+    left:0;
+    width:200px;
+    height:150px;
+    margin-left:-210px;
+}
+.container:hover .textbox {
+    margin-left:0;
+}
+.container img {
+    margin-left:0;
+}
+.container:hover img {
+    margin-left:210px;
+}
+.text {
+    padding-top: 50px;
+}
+.container img, .textbox {
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
