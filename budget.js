@@ -7,14 +7,28 @@ function budgetController($scope) {
         var rent = $scope.rent;
         var gas = $scope.gas;
         var groceries = $scope.groceries;
-        return rent + gas + groceries;
+        var cable = $scope.cable;
+        /*var clothes = $scope.clothes;
+        var food = $scope.food;
+        var utilities = $scope.utilities;
+        var fun = $scope.fun;
+        var vision = $scope.vision;
+        var healthcare= $scope.healthcare;
+        var autoInsurance= $scope.autoInsurance;
+        var misc1 = $scope.misc1;
+        var misc2 = $scope.misc2;
+
+        return rent + gas + groceries + cable + clothes + food +
+            utilities + fun + vision + healthcare + autoInsurance + misc1 + misc2;
+            */
+        return rent + gas + groceries + cable;
     };
 
 
     $scope.difference = function () {
         var totalExpenses = $scope.totalExpenses();
         var income = $scope.income;
-        return income + totalExpenses;
+        return income - totalExpenses;
     };
 
 

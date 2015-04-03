@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app >
 
 <head lang="en">
     <meta charset="UTF-8">
@@ -19,11 +19,11 @@
 
 </head>
 
-<body ng-app  ng-controller="budgetController">
+<body  ng-controller="budgetController">
 <img src="images/Alien.jpg" alt="UFO" style="width:304px;height:228px">
 
 <div id="sun">
-    <img src="images/sun.gif" class="sun" alt="Rhiannon" style="width:304px;height:228px"/>
+    <img src="images/sun.gif" class="sun" alt="Rhiannon" style="width:304px;height:228px">
 
 </div>
 
@@ -39,7 +39,8 @@
             <div class="control-group">
                 <label class="control-label" for="rent">Rent</label>
                 <div class="controls">
-                    <input id="rent" ng-model="rent" type="number" placeholder="Rent" class="input-xlarge">
+                    <input id="rent" ng-model="rent" type="number" required
+                           placeholder="Rent" class="input-xlarge">
 
                 </div>
             </div>
@@ -48,25 +49,28 @@
             <div class="control-group">
                 <label class="control-label" for="gas">Gas</label>
                 <div class="controls">
-                    <input id="gas" ng-model="gas" type="number" placeholder="Making it roll" class="input-xlarge">
+                    <input id="gas" ng-model="gas" type="number"
+                           placeholder="Making it roll" class="input-xlarge" required>
 
                 </div>
             </div>
 
-            <!-- Text input-->
+            <!-- Text input -->
             <div class="control-group">
                 <label class="control-label" for="groceries">Groceries</label>
                 <div class="controls">
-                    <input id="groceries" ng-model="groceries" type="number" placeholder="Groceries" class="input-xlarge">
+                    <input id="groceries" ng-model="groceries" type="number"
+                           placeholder="Groceries" class="input-xlarge" required>
 
                 </div>
             </div>
-<!--
-            <!-- Text input
+
+            <!-- Text input -->
             <div class="control-group">
                 <label class="control-label" for="cable">Cable</label>
                 <div class="controls">
-                    <input id="cable" name="cable" type="number" placeholder="Cable" class="input-xlarge">
+                    <input id="cable" ng-model="cable" type="number"
+                           placeholder="Cable" class="input-xlarge" required>
 
                 </div>
             </div>
@@ -75,7 +79,8 @@
             <div class="control-group">
                 <label class="control-label" for="clothes">clothes</label>
                 <div class="controls">
-                    <input id="clothes" name="clothes" type="number" placeholder="things to wear and shoes" class="input-xlarge">
+                    <input id="clothes" ng-model="clothes" type="number"
+                           placeholder="things to wear and shoes" class="input-xlarge">
 
                 </div>
             </div>
@@ -84,7 +89,8 @@
             <div class="control-group">
                 <label class="control-label" for="food">Eating Out</label>
                 <div class="controls">
-                    <input id="food" name="food" type="number" placeholder="jerk-in-the-box and other eateries" class="input-xlarge">
+                    <input id="food" ng-model="food" type="number"
+                           placeholder="jerk-in-the-box and other eateries" class="input-xlarge">
 
                 </div>
             </div>
@@ -93,7 +99,8 @@
             <div class="control-group">
                 <label class="control-label" for="utilities">Utilities</label>
                 <div class="controls">
-                    <input id="utilities" name="utilities" type="number" placeholder="electric, sewer, gas, water, trash" class="input-xlarge">
+                    <input id="utilities" ng-model="utilities" type="number"
+                           placeholder="electric, sewer, gas, water, trash" class="input-xlarge" >
 
                 </div>
             </div>
@@ -102,7 +109,8 @@
             <div class="control-group">
                 <label class="control-label" for="fun">Fun Stuff</label>
                 <div class="controls">
-                    <input id="fun" name="fun" type="number" placeholder="mini golf, the park ..." class="input-xlarge">
+                    <input id="fun" ng-model="fun" type="number"
+                           placeholder="mini golf, the park ..." class="input-xlarge">
 
                 </div>
             </div>
@@ -111,7 +119,8 @@
             <div class="control-group">
                 <label class="control-label" for="vision">Vision</label>
                 <div class="controls">
-                    <input id="vision" name="vision" type="number" placeholder="eye exams/contacts" class="input-xlarge">
+                    <input id="vision" ng-model="vision" type="number"
+                           placeholder="eye exams/contacts" class="input-xlarge">
 
                 </div>
             </div>
@@ -120,7 +129,8 @@
             <div class="control-group">
                 <label class="control-label" for="healthcare">Healthcare</label>
                 <div class="controls">
-                    <input id="healthcare" name="healthcare" type="number" placeholder="stuff that has to do with your body" class="input-xlarge">
+                    <input id="healthcare" ng-model="healthcare" type="number"
+                           placeholder="stuff that has to do with your body" class="input-xlarge">
 
                 </div>
             </div>
@@ -129,16 +139,27 @@
             <div class="control-group">
                 <label class="control-label" for="autoInsurance">Auto Insurance</label>
                 <div class="controls">
-                    <input id="autoInsurance" name="autoInsurance" type="number" placeholder="car insurance that is $0 for now" class="input-xlarge">
+                    <input id="autoInsurance" ng-model="autoInsurance" type="number"
+                           placeholder="car insurance that is $0 for now" class="input-xlarge" >
 
                 </div>
             </div>
 
             <!-- Text input
             <div class="control-group">
-                <label class="control-label" for="misc">Miscellaneous </label>
+                <label class="control-label" for="misc1">Miscellaneous </label>
                 <div class="controls">
-                    <input id="misc" name="misc" type="number" placeholder="miscellaneous" class="input-xlarge">
+                    <input id="misc1" ng-model="misc1" type="number"
+                           placeholder="miscellaneous" class="input-xlarge" >
+
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="misc2">Miscellaneous </label>
+                <div class="controls">
+                    <input id="misc2" ng-model="misc2" type="number"
+                           placeholder="miscellaneous" class="input-xlarge" >
 
                 </div>
             </div>
@@ -151,7 +172,7 @@
 
                 </div>
            </div>
-
+-->
             <!-- Button
             <div class="control-group">
                 <label class="control-label" for="budgieButton">Submit</label>
@@ -163,8 +184,7 @@
             -->
 
             <!--end of button -->
-
-
+            <hr>
             <div class="control-group">
 
                 <label><b>Total Expenses</b> </label>
@@ -180,17 +200,33 @@
         </fieldset>
     </form>
 </div>
-
-
 <div id="div-2">
     <h3>a little music while you budget away...</h3>
-<audio controls>
-    <source src="video/XFiles.mp4" type="audio/mp4">
-</audio>
+    <audio controls>
+        <source src="video/XFiles.mp4" type="audio/mp4">
+    </audio>
+<hr>
+
+    <h3>or hows about this... weeeeeeeeeeeeeeeee!</h3>
+    <audio controls>
+        <source src="video/hey2.mp4" type="audio/mp4">
+    </audio>
+
+    <h3>I know you'll like this</h3>
+    <audio controls>
+        <source src="video/moonlight2.mp4" type="audio/mp4">
+    </audio>
 </div>
+
+
+
 <!-- end audio file -- >
 
+<!-- to be added later
+
 <script src="video/xfiles.js"></script>
+<script src="video/hey2.js"></script>
+-->
 <script src="js/jquery-1.11.2.js"></script>
 <script src="js/bootstrap.js"></script>
 </body>

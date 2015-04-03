@@ -23,3 +23,5 @@ function makeNormal() {
     myVideo.width = 420;
 }
 
+
+
