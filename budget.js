@@ -35,7 +35,7 @@ function budgetController($scope) {
         var totalExpenses = $scope.totalExpenses();
         var income = $scope.income;
         if (income > totalExpenses) {
-            return .60 * (income - totalExpenses);
+            return .75 * (income - totalExpenses);
         }
         else {
             return 0;
