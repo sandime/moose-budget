@@ -1,0 +1,19 @@
+.jumbotron {
+    color: #9acfea;
+}
+#div-2 {
+    display: table;
+    margin: 0 auto;
+    color: deepskyblue;
+}
+body {
+    background-color: lightyellow;
+}
+#sun {
+    position: relative;
+}
+#sun img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}

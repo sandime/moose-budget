@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html ng-app>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!--[if lt IE 9]-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv-printshiv.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+
+</head>
+
+<body>
+<img src="images/Alien.jpg" alt="UFO" style="width:304px;height:228px">
+
+<div id="sun">
+    <img src="images/sun.gif" class="sun" alt="Rhiannon" style="width:304px;height:228px"/>
+
+</div>
+
+<div class="jumbotron text-center">
+    <h1>Hello, Rhiannon!</h1>
+    <form>
+        <fieldset>
+
+            <!-- Form Name -->
+            <legend>I AM Your Budget</legend>
+
+            <!-- Text input-->
+            <div class="control-group">
+                <label class="control-label" for="rent">Rent</label>
+                <div class="controls">
+                    <input id="rent" name="rent" type="number" placeholder="Rent" class="input-xlarge">
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="control-group">
+                <label class="control-label" for="Gas">Gas</label>
+                <div class="controls">
+                    <input id="Gas" name="Gas" type="number" placeholder="making it roll" class="input-xlarge">
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="control-group">
+                <label class="control-label" for="groceries">Groceries</label>
+                <div class="controls">
+                    <input id="groceries" name="groceries" type="number" placeholder="Groceries" class="input-xlarge">
+
+                </div>
+            </div>
+<!--
+            <!-- Text input-->
+            <div class="control-group">
+                <label class="control-label" for="cable">Cable</label>
+                <div class="controls">
+                    <input id="cable" name="cable" type="number" placeholder="Cable" class="input-xlarge">
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="control-group">
+                <label class="control-label" for="clothes">clothes</label>
+                <div class="controls">
+                    <input id="clothes" name="clothes" type="number" placeholder="things to wear and shoes" class="input-xlarge">
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="control-group">
+                <label class="control-label" for="food">Eating Out</label>
+                <div class="controls">
+                    <input id="food" name="food" type="number" placeholder="jerk-in-the-box and other eateries" class="input-xlarge">
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="control-group">
+                <label class="control-label" for="utilities">Utilities</label>
+                <div class="controls">
+                    <input id="utilities" name="utilities" type="number" placeholder="electric, sewer, gas, water, trash" class="input-xlarge">
+
+                </div>
+            </div>
+
+            <!-- Text input
+            <div class="control-group">
+                <label class="control-label" for="fun">Fun Stuff</label>
+                <div class="controls">
+                    <input id="fun" name="fun" type="number" placeholder="mini golf, the park ..." class="input-xlarge">
+
+                </div>
+            </div>
+
+            <!-- Text input
+            <div class="control-group">
+                <label class="control-label" for="vision">Vision</label>
+                <div class="controls">
+                    <input id="vision" name="vision" type="number" placeholder="eye exams/contacts" class="input-xlarge">
+
+                </div>
+            </div>
+
+            <!-- Text input
+            <div class="control-group">
+                <label class="control-label" for="healthcare">Healthcare</label>
+                <div class="controls">
+                    <input id="healthcare" name="healthcare" type="number" placeholder="stuff that has to do with your body" class="input-xlarge">
+
+                </div>
+            </div>
+
+            <!-- Text input
+            <div class="control-group">
+                <label class="control-label" for="autoInsurance">Auto Insurance</label>
+                <div class="controls">
+                    <input id="autoInsurance" name="autoInsurance" type="number" placeholder="car insurance that is $0 for now" class="input-xlarge">
+
+                </div>
+            </div>
+
+            <!-- Text input
+            <div class="control-group">
+                <label class="control-label" for="misc">Miscellaneous </label>
+                <div class="controls">
+                    <input id="misc" name="misc" type="number" placeholder="miscellaneous" class="input-xlarge">
+
+                </div>
+            </div>
+
+            <!-- Text input
+            <div class="control-group">
+                <label class="control-label" for="phone">Phone</label>
+                <div class="controls">
+                    <input id="phone" name="phone" type="number" placeholder="phone bill that will someday be $40" class="input-xlarge">
+
+                </div>
+           </div>
+-->
+            <!-- Button -->
+            <div class="control-group">
+                <label class="control-label" for="budgieButton">Submit</label>
+                <div class="controls">
+                    <button id="budgieButton" name="budgieButton" class="btn btn-primary">Voila!</button>
+                </div>
+            </div>
+            <hr>
+
+            <!--end of button -->
+
+
+            <div class="control-group">
+
+                <label><b>Total Expenses</b> </label>
+                <input type="number" value="{{totalExpenses()}}"/>
+
+                <label>Income</label>
+                <input type="number" ng-model="income"/>
+
+                <label><b>Surplus or Deficit</b></label>
+                <input type="number" value="{{difference()}}"/>
+            </div>
+
+        </fieldset>
+    </form>
+</div>
+
+
+<div id="div-2">
+    <h3>a little music while you budget away...</h3>
+<audio controls>
+    <source src="video/XFiles.mp4" type="audio/mp4">
+</audio>
+</div>
+<!-- end audio file -- >
+
+<script src="video/xfiles.js"></script>
+<script src="js/jquery-1.11.2.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+
+</html>
