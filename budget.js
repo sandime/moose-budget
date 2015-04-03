@@ -8,7 +8,7 @@ function budgetController($scope) {
         var gas = $scope.gas;
         var groceries = $scope.groceries;
         var cable = $scope.cable;
-        /*var clothes = $scope.clothes;
+        var clothes = $scope.clothes;
          var food = $scope.food;
          var utilities = $scope.utilities;
          var fun = $scope.fun;
@@ -20,8 +20,7 @@ function budgetController($scope) {
 
          return rent + gas + groceries + cable + clothes + food +
          utilities + fun + vision + healthcare + autoInsurance + misc1 + misc2;
-         */
-        return rent + gas + groceries + cable;
+
     };
 
 // gets the difference between income and expenses
