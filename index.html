@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html ng-app>
+<html>
 
 <head lang="en">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>Sun's Budgie</title>
+    <script src="budget.js"></script>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+
 
     <!--[if lt IE 9]-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv-printshiv.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
 
 </head>
 
-<body>
+<body ng-app  ng-controller="budgetController">
 <img src="images/Alien.jpg" alt="UFO" style="width:304px;height:228px">
 
 <div id="sun">
@@ -26,7 +28,7 @@
 </div>
 
 <div class="jumbotron text-center">
-    <h1>Hello, Rhiannon!</h1>
+    <h1>Hello, Sun!</h1>
     <form>
         <fieldset>
 
@@ -37,16 +39,16 @@
             <div class="control-group">
                 <label class="control-label" for="rent">Rent</label>
                 <div class="controls">
-                    <input id="rent" name="rent" type="number" placeholder="Rent" class="input-xlarge">
+                    <input id="rent" ng-model="rent" type="number" placeholder="Rent" class="input-xlarge">
 
                 </div>
             </div>
 
             <!-- Text input-->
             <div class="control-group">
-                <label class="control-label" for="Gas">Gas</label>
+                <label class="control-label" for="gas">Gas</label>
                 <div class="controls">
-                    <input id="Gas" name="Gas" type="number" placeholder="making it roll" class="input-xlarge">
+                    <input id="gas" ng-model="gas" type="number" placeholder="Making it roll" class="input-xlarge">
 
                 </div>
             </div>
@@ -55,12 +57,12 @@
             <div class="control-group">
                 <label class="control-label" for="groceries">Groceries</label>
                 <div class="controls">
-                    <input id="groceries" name="groceries" type="number" placeholder="Groceries" class="input-xlarge">
+                    <input id="groceries" ng-model="groceries" type="number" placeholder="Groceries" class="input-xlarge">
 
                 </div>
             </div>
 <!--
-            <!-- Text input-->
+            <!-- Text input
             <div class="control-group">
                 <label class="control-label" for="cable">Cable</label>
                 <div class="controls">
@@ -69,7 +71,7 @@
                 </div>
             </div>
 
-            <!-- Text input-->
+            <!-- Text input
             <div class="control-group">
                 <label class="control-label" for="clothes">clothes</label>
                 <div class="controls">
@@ -78,7 +80,7 @@
                 </div>
             </div>
 
-            <!-- Text input-->
+            <!-- Text input
             <div class="control-group">
                 <label class="control-label" for="food">Eating Out</label>
                 <div class="controls">
@@ -87,7 +89,7 @@
                 </div>
             </div>
 
-            <!-- Text input-->
+            <!-- Text input
             <div class="control-group">
                 <label class="control-label" for="utilities">Utilities</label>
                 <div class="controls">
@@ -149,8 +151,8 @@
 
                 </div>
            </div>
--->
-            <!-- Button -->
+
+            <!-- Button
             <div class="control-group">
                 <label class="control-label" for="budgieButton">Submit</label>
                 <div class="controls">
@@ -158,6 +160,7 @@
                 </div>
             </div>
             <hr>
+            -->
 
             <!--end of button -->
 

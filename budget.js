@@ -1,13 +1,13 @@
 /**
  * Created by SHERRI on 4/2/15.
  */
-function mainController($scope) {
+function budgetController($scope) {
 
     $scope.totalExpenses = function () {
         var rent = $scope.rent;
-        var utilities = $scope.utilities;
-        var autoPayment = $scope.autoPayment;
-        return rent + utilities + autoPayment;
+        var gas = $scope.gas;
+        var groceries = $scope.groceries;
+        return rent + gas + groceries;
     };
 
 
